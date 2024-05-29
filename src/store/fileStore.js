@@ -5,12 +5,16 @@ import { useToast } from "vue-toastification";
 import confirmToastrComponent from '../components/confirmToastrComponent.vue';
 
 
-const basePath = await fileAPI.getBasePath();
+async function fetchBasePath() {
+    return await fileAPI.getBasePath();
+}
 
 export const useFileStore = defineStore('file', () => {
     // States
-    const fileMapPath = `${basePath}/fileMap.json`;
-    const filesPath = `${basePath}/files`;
+
+    let basePath = "";
+    let fileMapPath = "";
+    let filesPath = ""
     const fileMap = ref([]);
     const toast = useToast();
 
@@ -229,10 +233,19 @@ export const useFileStore = defineStore('file', () => {
         toast.success("File reverted successfully");
     }
 
-    checkBasePath();
-    fileMapInit();
-    filesInit();
-    checkFileMap();
+    fetchBasePath().then((result) => {
+        basePath = result;
+        fileMapPath = `${basePath}/fileMap.json`;
+        filesPath = `${basePath}/files`;
+
+        checkBasePath();
+        fileMapInit();
+        filesInit();
+        checkFileMap();
+    }).catch((error) => {
+        console.error('Failed to fetch base path:', error);
+    });
+
     return {
         addFileToFileMap,
         fileMap,

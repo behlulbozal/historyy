@@ -14,10 +14,13 @@
         <img class="h-12 w-12" :src="loadImg(`/static/${selectedFile.extension.replace('.', '').toUpperCase()}.svg`)" />
         <div class="grid break-all cursor-pointer h-max select-none">
           <div class="flex items-center gap-1">
-            <span class="text-sm font-semibold">
-              {{ file.summery }}
+            <span class="text-sm">
+              <strong>
+
+                {{ file.summery }}
+              </strong>
               <br />
-              {{ moment(file.date).format('MMMM Do YYYY, h:mm:ss a') }}
+             <small> {{ moment(file.date).format('MMMM Do YYYY, h:mm:ss a') }}</small>
             </span>
           </div>
           <span class="text-xs text-gray-500">{{ prettyBytes(selectedFile.size) }}</span>

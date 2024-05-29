@@ -37,8 +37,8 @@ app.whenReady().then(() => {
   createWindow();
 
   ipcMain.handle('desktop', () => app.getPath('desktop'));
-  ipcMain.handle('show-save-dialog', async (event, fileName) => await dialog.showSaveDialog(mainWindowGLobal, { defaultPath: fileName ? app.getPath('desktop') + '/' + fileName : app.getPath('desktop') }));
-  ipcMain.handle('get-base-path', async () => await app.getPath('userData'));
+  ipcMain.handle('show-save-dialog', (event, fileName) => dialog.showSaveDialog(mainWindowGLobal, { defaultPath: fileName ? app.getPath('desktop') + '/' + fileName : app.getPath('desktop') }));
+  ipcMain.handle('get-base-path', () => app.getPath('userData'));
 
   // On OS X it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.
