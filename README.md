@@ -1,3 +1,11 @@
+
+
+<div>
+  <img width="30%" alt="image" src="https://github.com/behlulbozal/historyy/assets/57594143/becce37c-c0c0-4ab2-83cc-9c6b3f832222">
+  <img width="30%" alt="image" src="https://github.com/behlulbozal/historyy/assets/57594143/99edcc2d-1543-46e7-b7ac-3a1442d7a72c">
+  <img width="30%" alt="image" src="https://github.com/behlulbozal/historyy/assets/57594143/05e62f39-27d9-4fe4-8200-260fcc6ed5c8">
+</div>
+
 ### Project Overview
 
 This project is a file versioning system, designed to track changes to files and maintain a history of modifications. This system uses Electron and Vite to provide a user-friendly interface for managing file versions, similar to how Git manages code repositories. Tailwind CSS is used for styling the application.
