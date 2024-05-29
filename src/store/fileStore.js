@@ -44,7 +44,9 @@ export const useFileStore = defineStore('file', () => {
             fileMap.value.forEach((fileMapObject) => {
                 try {
                     const stat = getFileStat(fileMapObject.path);
-                    if (stat.size !== fileMapObject.size) {
+                    const fileMapObjectMtime = new Date(fileMapObject.mtime).getTime();
+                    const statMtime = new Date(stat.mtime).getTime();
+                    if (statMtime > fileMapObjectMtime) {
                         fileMapObject.size = stat.size;
                         fileMapObject.mtime = stat.mtime;
                         fileMapObject.notSaved = true;
