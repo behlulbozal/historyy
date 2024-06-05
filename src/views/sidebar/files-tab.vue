@@ -14,7 +14,7 @@
           @click="selectFile(file)"
         >
           <div class="flex">
-            <img class="h-12 w-12" :src="loadImg(`/static/${file.extension.replace('.', '').toUpperCase()}.svg`)" />
+            <img class="h-12 w-12" :src="`assets/${file.extension.replace('.', '').toUpperCase()}.svg`"  />
             <div class="grid break-all cursor-pointer h-max select-none">
               <div class="flex items-center gap-1">
                 <tippy :content="file.path">
@@ -106,7 +106,6 @@ const reLocateFileInputChanged = () => {
   }
 }
 
-const loadImg = (path) => new URL(path, import.meta.url).href
 const selectedFile = computed(() => sidebarStore.selectedFile)
 const selectFile = (file) => sidebarStore.selectFile(file)
 const openDir = (path) => fileStore.openDir(path)

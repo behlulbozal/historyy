@@ -29,7 +29,8 @@ export default defineConfig((env) => {
     resolve: {
       // Load the Node.js entry.
       mainFields: ['module', 'jsnext:main', 'jsnext'],
-      alias: { '@images': path.resolve(__dirname, 'static') }
+      alias: { '@images': path.resolve(__dirname, 'static'), 'assets': path.resolve(__dirname, './public/assets') },
+
 
     },
   };
