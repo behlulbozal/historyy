@@ -1,10 +1,13 @@
 
+<img width="10%" alt="image" src="https://github.com/behlulbozal/historyy/assets/57594143/1809dd43-dbc1-4838-9386-8b5453c7afd3">
 
 <div>
   <img width="30%" alt="image" src="https://github.com/behlulbozal/historyy/assets/57594143/becce37c-c0c0-4ab2-83cc-9c6b3f832222">
   <img width="30%" alt="image" src="https://github.com/behlulbozal/historyy/assets/57594143/99edcc2d-1543-46e7-b7ac-3a1442d7a72c">
   <img width="30%" alt="image" src="https://github.com/behlulbozal/historyy/assets/57594143/05e62f39-27d9-4fe4-8200-260fcc6ed5c8">
 </div>
+
+### [Download For MAC](https://drive.google.com/file/d/1vlY3mlGz1qK5rU4LDaoWHyhRl9gcmhR4/view?usp=sharing "Download For MAC")
 
 ### Project Overview
 
