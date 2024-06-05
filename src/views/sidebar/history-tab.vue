@@ -11,7 +11,7 @@
       class="flex justify-between items-center border-b hover:shadow-sm p-1 m-1 rounded-md"
     >
       <div class="flex justify-between">
-        <img class="h-12 w-12" :src="loadImg(`/static/${selectedFile.extension.replace('.', '').toUpperCase()}.svg`)" />
+        <img class="h-12 w-12" :src="`assets/${selectedFile.extension.replace('.', '').toUpperCase()}.svg`"  />
         <div class="grid break-all cursor-pointer h-max select-none">
           <div class="flex items-center gap-1">
             <span class="text-sm">
@@ -65,7 +65,6 @@ import moment from 'moment'
 const sidebarStore = useSidebarStore()
 const fileStore = useFileStore()
 const selectedFile = computed(() => sidebarStore.selectedFile)
-const loadImg = (path) => new URL(path, import.meta.url).href
 const exportFile = (path) => fileStore.exportFile({ path })
 const reverseCommits = computed(() => selectedFile.value.commits.slice().reverse())
 const revertFile = (commit) => fileStore.revertFile({ file: selectedFile.value, commit })

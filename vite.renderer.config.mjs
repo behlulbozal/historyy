@@ -22,7 +22,7 @@ export default defineConfig((env) => {
     plugins: [pluginExposeRenderer(name), vue()],
     resolve: {
       preserveSymlinks: true,
-      alias: { '@images': path.resolve(__dirname, 'static') }
+      alias: { '@images': path.resolve(__dirname, 'static'), 'assets': path.resolve(__dirname, './public/assets') }
     },
     clearScreen: false,
   };
